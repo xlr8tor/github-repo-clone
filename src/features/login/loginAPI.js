@@ -1,6 +1,6 @@
 export const fetchData = async (data) => {
   const response = await fetch(
-    "https://github-repo-task.herokuapp.com.authenticate",
+    "https://github-repo-task.herokuapp.com/authenticate",
     {
       method: "POST",
       headers: {
