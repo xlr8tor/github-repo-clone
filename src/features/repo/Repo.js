@@ -67,7 +67,11 @@ const Repo = ({ name, language, visibility, updated }) => {
             <span className="repo__language">{language}</span>
           </span>
           {" Updated "}
-          <span>{timeSince(updated)}</span>
+          <span>
+            {() => {
+              timeSince(updated);
+            }}
+          </span>
         </div>
       </div>
       <div className="repo__button-section">
