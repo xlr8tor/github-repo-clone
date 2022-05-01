@@ -7,7 +7,7 @@ const Dropdown = () => {
       <div className="dropdown_menu">
         <header className="dropdown_header">
           <span className="dropdown_title">Select order</span>
-          <button className="dropdown_close">
+          <button className="dropdown_close" type="button">
             <FaTimes />
           </button>
         </header>

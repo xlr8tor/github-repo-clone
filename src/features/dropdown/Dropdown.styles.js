@@ -58,6 +58,7 @@ export const Wrapper = styled.div`
     line-height: 1;
     margin: -8px -7px;
     color: hsl(212deg 10% 38%);
+    cursor: pointer;
   }
 
   .dropdown_list {
