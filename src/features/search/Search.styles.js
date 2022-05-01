@@ -47,4 +47,17 @@ export const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
   }
+
+  .search__new-repo {
+    display: flex;
+  }
+
+  .new-repo {
+    margin-left: var(--mb-1);
+    color: #fff;
+    background-color: hsl(137deg 57% 41%);
+    border-color: hsl(213deg 14% 12% / 15%);
+    box-shadow: box-shadow: 0 1px 0 rgba(27, 31, 36, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  }
 `;

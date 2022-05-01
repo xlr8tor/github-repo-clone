@@ -1,5 +1,6 @@
 import Button from "../button/Button";
 import { Wrapper } from "./Search.styles";
+import { FaBook } from "react-icons/fa";
 
 const Search = () => {
   return (
@@ -18,7 +19,8 @@ const Search = () => {
           </div>
         </form>
         <div className="search__new-repo">
-          <span className="btn">New</span>
+          <FaBook />
+          <button className="btn new-repo">New</button>
         </div>
       </div>
     </Wrapper>
