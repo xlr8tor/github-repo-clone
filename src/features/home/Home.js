@@ -11,7 +11,7 @@ const Home = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const accessToken = useSelector(selectAccessToken);
 
-  if (!isLoggedIn && !accessToken) {
+  if (!isLoggedIn && accessToken) {
     return <Navigate to="/login" />;
   }
 

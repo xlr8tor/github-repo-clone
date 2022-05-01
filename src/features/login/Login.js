@@ -11,6 +11,7 @@ import {
 import { Wrapper } from "./Login.styles";
 import { UilGithub } from "@iconscout/react-unicons";
 import { getAuthorizeHref } from "../../oauthConfig";
+import Spinner from "../spinner/Spinner";
 
 const Login = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -53,7 +54,7 @@ const Login = () => {
               Maintain your repos with ease
             </span>
           </div>
-
+          {loginStatus == "loading" ? <Spinner /> : null}
           <div className="login__buttons">
             <button
               className="button button--flex"
