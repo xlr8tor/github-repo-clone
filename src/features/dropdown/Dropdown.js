@@ -3,7 +3,7 @@ import { FaTimes, FaCheck } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { filter } from "../login/loginSlice";
 
-const Dropdown = () => {
+const Dropdown = ({ onShowMenu }) => {
   const dispatch = useDispatch();
 
   return (
