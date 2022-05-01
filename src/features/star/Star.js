@@ -35,6 +35,7 @@ const Button = styled.button`
     font-size: 12px;
     vertical-align: middle;
     margin-right: var(--mb-0-25);
+    color: hsl(212deg 10% 38%);
   }
 
   svg.tp {
