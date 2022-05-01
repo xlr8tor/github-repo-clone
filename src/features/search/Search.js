@@ -34,8 +34,7 @@ const Search = () => {
         </form>
         <div className="search__new-repo">
           <button className="btn new-repo">
-            <FaBook />
-            New
+            <FaBook className="new-repo_icon" /> New
           </button>
         </div>
       </div>

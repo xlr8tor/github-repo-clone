@@ -40,6 +40,11 @@ const Wrapper = styled.button`
   margin-right: ${(props) => (props.mr ? "var(--mb-0-25)" : "0")};
   margin-left: ${(props) => (props.ml ? "var(--mb-0-25)" : "0")};
 
+  &:hover {
+    border-color: hsl(213deg 14% 12% / 15%);
+    background-color: hsl(220deg 14% 96%);
+  }
+
   svg.caret__icon {
     margin-left: var(--mb-0-25);
     vertical-align: middle;
