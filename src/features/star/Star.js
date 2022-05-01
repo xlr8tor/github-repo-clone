@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import { FaCaretRight, FaRegStar } from "react-icons/fa";
+import { FaCaretDown, FaRegStar } from "react-icons/fa";
 
 const Star = () => {
   return (
     <div>
       <Button className="btn starred">
-        <FaRegStar className="button__icon star__icon" />
+        <FaRegStar className="star__icon tp" />
         Star
       </Button>
       <Button className="btn caret">
-        <FaCaretRight />
+        <FaCaretDown className="star__icon" />
       </Button>
     </div>
   );
@@ -22,6 +22,7 @@ const Button = styled.button`
     border-bottom-left-radius: 6px;
     border-top-left-radius: 6px;
     border-right-width: 0;
+    font-weight: var(--font-semi-bold);
   }
 
   &.caret {
@@ -32,5 +33,12 @@ const Button = styled.button`
   svg.star__icon {
     display: inline-block;
     font-size: 12px;
+    vertical-align: middle;
+    margin-right: var(--mb-0-25);
+  }
+
+  svg.tp {
+    vertical-align: sub;
+    font-size: 1rem;
   }
 `;

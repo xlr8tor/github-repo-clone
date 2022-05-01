@@ -2,7 +2,15 @@ import Pill from "../pill/Pill";
 import Star from "../star/Star";
 import { Wrapper } from "./Repo.styles";
 
-const Repo = ({ name, language, visibility, updated, description }) => {
+const Repo = ({
+  name,
+  language,
+  visibility,
+  updated,
+  description,
+  fork,
+  forks_url,
+}) => {
   const months = [
     "Jan",
     "Feb",
@@ -62,6 +70,12 @@ const Repo = ({ name, language, visibility, updated, description }) => {
             </a>
             <span></span>
             <Pill content={capitalize(visibility)} secondary={true} />
+            {fork && (
+              <span className="repo_forked">
+                Forked from{" "}
+                {forks_url.split("/")[4] + "/" + forks_url.split("/")[5]}
+              </span>
+            )}
           </h3>
         </div>
         {description && (

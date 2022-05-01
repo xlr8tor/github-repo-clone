@@ -26,6 +26,8 @@ const Repos = () => {
               visibility={item.visibility}
               updated={item.updated_at}
               description={item.description}
+              fork={item.fork}
+              forks_url={item.forks_url}
             />
           );
         })}
