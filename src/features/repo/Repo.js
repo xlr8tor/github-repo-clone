@@ -71,10 +71,12 @@ const Repo = ({ name, language, visibility, updated, description }) => {
         )}
         <div></div>
         <div className="repo__description">
-          <span className="repo__data">
-            <span className="repo__laguage-color"></span>
-            <span className="repo__language">{language}</span>
-          </span>
+          {language && (
+            <span className="repo__data">
+              <span className={`repo__laguage-color ${language}`}></span>
+              <span className="repo__language">{language}</span>
+            </span>
+          )}
           {" Updated "}
           <span>{timeSince(updated)}</span>
         </div>
