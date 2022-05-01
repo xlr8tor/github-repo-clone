@@ -48,6 +48,10 @@ const Repo = ({ name, language, visibility, updated }) => {
     return Math.floor(seconds) + " seconds ago";
   };
 
+  const capitalize = (text) => {
+    return text.slice(0, 1).toUpperCase() + text.slice(1);
+  };
+
   return (
     <Wrapper className="repo__item">
       <div>
@@ -57,7 +61,7 @@ const Repo = ({ name, language, visibility, updated }) => {
               {name}
             </a>
             <span></span>
-            <Pill content={visibility} secondary={true} />
+            <Pill content={capitalize(visibility)} secondary={true} />
           </h3>
         </div>
         <div></div>

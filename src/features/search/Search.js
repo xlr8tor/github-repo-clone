@@ -1,8 +1,15 @@
+import { useState } from "react";
 import Button from "../button/Button";
 import { Wrapper } from "./Search.styles";
 import { FaBook } from "react-icons/fa";
 
 const Search = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const onChangeVisible = (flag) => {
+    setIsVisible(flag);
+  };
+
   return (
     <Wrapper className="search__group">
       <div className="search__controls">
@@ -14,7 +21,13 @@ const Search = () => {
             <div className="search__buttons">
               <Button text="Type" mr={true} />
               <Button text="Laguage" />
-              <Button text="Sort" ml={true} />
+              <Button
+                text="Sort"
+                ml={true}
+                onShowMenu={onChangeVisible}
+                isVisible={isVisible}
+              />
+              {isVisible && <Dropdown />}
             </div>
           </div>
         </form>

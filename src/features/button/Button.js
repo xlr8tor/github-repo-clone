@@ -1,9 +1,18 @@
 import styled from "styled-components";
 import { FaCaretDown } from "react-icons/fa";
 
-const Button = ({ text, ml, mr }) => {
+const Button = ({ text, ml, mr, onShowMenu, isVisible }) => {
   return (
-    <Wrapper ml={ml} mr={mr}>
+    <Wrapper
+      ml={ml}
+      mr={mr}
+      type="button"
+      onClick={() => {
+        if (text === "Sort") {
+          onShowMenu(!isVisible);
+        }
+      }}
+    >
       {text}
       <FaCaretDown size="11" className="caret__icon" />
     </Wrapper>
