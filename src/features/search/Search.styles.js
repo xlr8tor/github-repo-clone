@@ -59,5 +59,6 @@ export const Wrapper = styled.div`
     border-color: hsl(213deg 14% 12% / 15%);
     box-shadow: box-shadow: 0 1px 0 rgba(27, 31, 36, 0.04),
     inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    border-radius: 6px;
   }
 `;

@@ -19,8 +19,10 @@ const Search = () => {
           </div>
         </form>
         <div className="search__new-repo">
-          <FaBook />
-          <button className="btn new-repo">New</button>
+          <button className="btn new-repo">
+            <FaBook />
+            New
+          </button>
         </div>
       </div>
     </Wrapper>
