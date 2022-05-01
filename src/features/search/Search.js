@@ -28,7 +28,7 @@ const Search = () => {
                 onShowMenu={onChangeVisible}
                 isVisible={isVisible}
               />
-              {isVisible && <Dropdown />}
+              {isVisible && <Dropdown onShowMenu={onChangeVisible} />}
             </div>
           </div>
         </form>
