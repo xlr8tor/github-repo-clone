@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "../button/Button";
+import Dropdown from "../dropdown/Dropdown";
 import { Wrapper } from "./Search.styles";
 import { FaBook } from "react-icons/fa";
 
