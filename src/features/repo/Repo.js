@@ -1,8 +1,9 @@
 import Pill from "../pill/Pill";
 import Star from "../star/Star";
 import { Wrapper } from "./Repo.styles";
+
 const Repo = ({ name, language, visibility, updated }) => {
-  const month = [
+  const months = [
     "Jan",
     "Feb",
     "Mar",
@@ -19,19 +20,18 @@ const Repo = ({ name, language, visibility, updated }) => {
 
   const timeSince = (time) => {
     const date = new Date(time);
-    let month = month[date.getMonth()];
+    let month = months[date.getMonth()];
     let day = date.getDate();
     let year = date.getFullYear().toString().substring(2);
 
     var seconds = Math.floor((new Date() - date) / 1000);
     var interval = seconds / 31536000;
-
     if (interval > 1) {
-      return day + month + year;
+      return `${day} ${month} ${year}`;
     }
     interval = seconds / 2592000;
     if (interval > 1) {
-      return day + month;
+      return `${day} ${month}`;
     }
     interval = seconds / 86400;
     if (interval > 1) {
