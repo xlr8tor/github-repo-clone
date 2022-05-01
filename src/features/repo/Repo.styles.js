@@ -30,6 +30,14 @@ export const Wrapper = styled.li`
     outline-width: 0;
   }
 
+  .repo_inspiration {
+    display: inline-block;
+    padding-right: 2rem;
+    margin-bottom: var(--mb-0-5);
+    color: hsl(212deg 10% 38%);
+    font-size: 14px;
+  }
+
   .repo__description {
     margin-top: (--mb-0-5);
     font-size: var(--smaller-font-size);

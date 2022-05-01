@@ -59,6 +59,11 @@ export const Wrapper = styled.div`
     font-weight: var(--font-semi-bold);
   }
 
+  .btn-edit:hover {
+    border-color: hsl(213deg 14% 12% / 15%);
+    background-color: hsl(220deg 14% 96%);
+  }
+
   .profile__bio {
     font-size: var(--normal-font-size);
     margin-bottom: var(--mb-1);

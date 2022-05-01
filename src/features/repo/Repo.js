@@ -2,7 +2,7 @@ import Pill from "../pill/Pill";
 import Star from "../star/Star";
 import { Wrapper } from "./Repo.styles";
 
-const Repo = ({ name, language, visibility, updated }) => {
+const Repo = ({ name, language, visibility, updated, description }) => {
   const months = [
     "Jan",
     "Feb",
@@ -64,6 +64,11 @@ const Repo = ({ name, language, visibility, updated }) => {
             <Pill content={capitalize(visibility)} secondary={true} />
           </h3>
         </div>
+        {description && (
+          <div>
+            <p className="repo_inspiration">{description}</p>
+          </div>
+        )}
         <div></div>
         <div className="repo__description">
           <span className="repo__data">

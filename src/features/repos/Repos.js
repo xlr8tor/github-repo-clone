@@ -25,6 +25,7 @@ const Repos = () => {
               language={item.language}
               visibility={item.visibility}
               updated={item.updated_at}
+              description={item.description}
             />
           );
         })}
