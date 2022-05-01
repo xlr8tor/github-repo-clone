@@ -202,9 +202,9 @@ export const GlobalStyles = createGlobalStyle`
   .btn {
     position: relative ;
     background-color: var(--button-bg-color);
-    padding: 3px 12px;
+    padding: 5px 16px;
     border: 1px solid var(--button-border-color);
-    font-size: var(--smaller-font-size);
+    font-size: 14px;
     font-weight: var(--font-medium);
     line-height: 20px;
     white-space: nowrap;

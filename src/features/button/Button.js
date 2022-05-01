@@ -24,7 +24,7 @@ export default Button;
 const Wrapper = styled.button`
   position: relative;
   background-color: var(--button-bg-color);
-  padding: 3px 12px;
+  padding: 5px 16px;
   border: 1px solid var(--button-border-color);
   border-radius: 6px;
   font-size: var(--smaller-font-size);
