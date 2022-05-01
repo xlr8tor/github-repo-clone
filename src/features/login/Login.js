@@ -1,13 +1,7 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Navigate } from "react-router-dom";
-import {
-  setLoggedIn,
-  setAccessToken,
-  selectIsLoggedIn,
-  fetchAsync,
-  fetchRepoAsync,
-} from "./loginSlice";
+import { selectIsLoggedIn, fetchAsync, fetchRepoAsync } from "./loginSlice";
 import { Wrapper } from "./Login.styles";
 import { UilGithub } from "@iconscout/react-unicons";
 import { getAuthorizeHref } from "../../oauthConfig";

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const NavItem = ({ children }) => {
+const NavItem = ({ children, active }) => {
   return (
-    <Wrapper className="nav__item">
+    <Wrapper className="nav__item" active={active}>
       <a href="/" className="nav__link">
         {children}
       </a>
@@ -14,12 +14,12 @@ export default NavItem;
 
 const Wrapper = styled.li`
   &.nav__item {
-    border-bottom: 2px solid transparent;
+    border-bottom: ${(props) =>
+      props.active ? "2px solid hsl(11deg 97% 72%)" : "2px solid transparent"};
   }
 
   &.nav__item:hover {
     font-weight: var(--font-semi-bold);
-    border-bottom: 2px solid hsl(11deg 97% 72%);
   }
 
   .nav__link {

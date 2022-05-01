@@ -8,9 +8,6 @@ export const GlobalStyles = createGlobalStyle`
     /* Change favorite color */
     --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
     --first-color: hsl(var(--hue-color),69%, 61%);
-    --firstColorSecond:hsl(var(--hue-color),69%, 61%);
-    --firstColorAlt: hsl(var(--hue-color), 57%, 53%);
-    --firstColorLighter: hsl(var(--hue-color),92%, 85%);
     --titleColor: hsl(var(--hue-color), 8%, 15%);
     --textColor: hsl(var(--hue-color),8%, 45%);
     --textColorLight: hsl(var(--hue-color), 8%, 65%);
@@ -74,8 +71,6 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-
-    
   }
 
   html {
@@ -118,43 +113,8 @@ export const GlobalStyles = createGlobalStyle`
     font-size: inherit;
   }
 
-  
-
-  @media screen and (min-width: 968px) {
-    --big-font-size: 3rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: 0.875rem;
-    --smaller-font-size: 0.813rem;
-  }
-
-  
-
-  
-
-  
-
   /* ============ Reuseable Classes ============ */
-  .section {
-      padding: 2rem 0 4rem;
-  }
-
-  .section__title {
-      font-size: var(--h1-font-size);
-  }
-
-  .section__subtitle {
-      display: block;
-      font-size: var(--small-font-size);
-      margin-bottom: var(--mb-3);
-  }
-
-  .section__title,
-  .section__subtitle {
-      text-align: center;
-  }
+ 
 
   .text-bold {
     font-weight: var(--font-semi-bold);
@@ -224,14 +184,6 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
       margin: 0;
-    }
-
-    .section {
-      padding: 6rem 2rem;
-    }
-
-    .section__subtitle {
-      margin-bottom: 4rem;
     }
   }
 

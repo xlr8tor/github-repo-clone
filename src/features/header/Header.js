@@ -23,7 +23,7 @@ const Header = () => {
                 <UilBookOpen className="nav__icon" size="16" />
                 <span>Overview</span>
               </NavItem>
-              <NavItem>
+              <NavItem active={true}>
                 <UilBookAlt className="nav__icon" size="16" />
                 <span>Repositories</span>
                 <Pill content={repoCount} />
