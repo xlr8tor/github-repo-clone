@@ -8,7 +8,8 @@ const initialState = {
   error: null,
   repos: [],
   accessToken: "",
-  filter: false,
+  sort: false,
+  filter: "All",
 };
 
 export const fetchAsync = createAsyncThunk("auth/fetchData", async (data) => {
@@ -39,8 +40,11 @@ export const authSlice = createSlice({
     setAccessToken: (state, action) => {
       state.accessToken = action.payload;
     },
-    filter: (state) => {
-      state.filter = !state.filter;
+    filter: (state, action) => {
+      state.filter = action.payload.language;
+    },
+    sort: (state) => {
+      state.sort = !state.sort;
     },
   },
 
@@ -66,10 +70,11 @@ export const authSlice = createSlice({
   },
 });
 
-export const { setLoggedIn, setAccessToken, logout, filter } =
+export const { setLoggedIn, setAccessToken, logout, filter, sort } =
   authSlice.actions;
 
 export const selectIsLoggedIn = (state) => state.auth.isLoggedIn;
+export const selectLanguage = (state) => state.auth.filter;
 export const selectAccessToken = (state) => state.auth.accessToken;
 
 export default authSlice.reducer;

@@ -5,12 +5,20 @@ import { Container, Wrapper } from "./Repos.styles";
 
 const Repos = () => {
   const repos = useSelector((state) => {
-    if (state.auth.filter) {
-      return [...state.auth.repos].sort((a, b) =>
-        b["name"].localeCompare(a["name"])
-      );
+    let newState = [...state.auth.repos];
+    if (state.auth.sort) {
+      newState = newState.sort((a, b) => b["name"].localeCompare(a["name"]));
     }
-    return state.auth.repos;
+
+    if (state.auth.filter) {
+      newState = newState.filter((item) => {
+        if (state.auth.filter != "All") {
+          return item.language === state.auth.filter;
+        }
+        return item;
+      });
+    }
+    return newState;
   });
 
   return (

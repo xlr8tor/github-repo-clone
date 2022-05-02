@@ -9,7 +9,9 @@ const Button = ({ text, ml, mr, onShowMenu, isVisible }) => {
       type="button"
       onClick={() => {
         if (text === "Sort") {
-          onShowMenu(!isVisible);
+          onShowMenu({ sort: !isVisible.sort, filter: false });
+        } else if (text === "language") {
+          onShowMenu({ sort: false, filter: !isVisible.filter });
         }
       }}
     >

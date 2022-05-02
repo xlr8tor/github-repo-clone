@@ -5,7 +5,7 @@ import { Wrapper } from "./Search.styles";
 import { FaBook } from "react-icons/fa";
 
 const Search = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState({ sort: false, filter: false });
 
   const onChangeVisible = (flag) => {
     setIsVisible(flag);
@@ -22,6 +22,9 @@ const Search = () => {
             <div className="search__buttons">
               <Button text="Type" mr={true} />
               <Button text="Laguage" />
+              {isVisible.filter && (
+                <Dropdown onShowMenu={onChangeVisible} type={"language"} />
+              )}
               <Button
                 text="Sort"
                 ml={true}
