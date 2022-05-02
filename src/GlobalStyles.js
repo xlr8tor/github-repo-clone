@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     /* Change favorite color */
     --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
     --first-color: hsl(var(--hue-color),69%, 61%);
+    --firstColorAlt: hsl(var(--hue-color), 57%, 53%);
     --titleColor: hsl(var(--hue-color), 8%, 15%);
     --textColor: hsl(var(--hue-color),8%, 45%);
     --textColorLight: hsl(var(--hue-color), 8%, 65%);
