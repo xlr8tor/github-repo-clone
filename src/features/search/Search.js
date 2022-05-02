@@ -21,7 +21,11 @@ const Search = () => {
             </div>
             <div className="search__buttons">
               <Button text="Type" mr={true} />
-              <Button text="Language" />
+              <Button
+                text="Language"
+                onShowMenu={onChangeVisible}
+                isVisible={isVisible}
+              />
               {isVisible.filter && (
                 <Dropdown onShowMenu={onChangeVisible} type={"language"} />
               )}
