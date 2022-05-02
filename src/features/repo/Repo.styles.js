@@ -66,6 +66,17 @@ export const Wrapper = styled.li`
     margin-right: var(--mb-0-25);
   }
 
+  .repo_star-count {
+    margin-right: var(--mb-2);
+    color: hsl(212deg 10% 38%);
+  }
+
+  .repo_star-icon {
+    display: inline-block;
+    vertical-align: text-bottom;
+    color: currentColor;
+  }
+
   .repo__button-section {
     display: flex;
     justify-content: space-around;

@@ -1,6 +1,7 @@
 import Pill from "../pill/Pill";
 import Star from "../star/Star";
 import { Wrapper } from "./Repo.styles";
+import { FaRegStar } from "react-icons/fa";
 
 const Repo = ({
   name,
@@ -10,6 +11,7 @@ const Repo = ({
   description,
   fork,
   forks_url,
+  stargazers_count,
 }) => {
   const months = [
     "Jan",
@@ -91,6 +93,12 @@ const Repo = ({
               <span className="repo__language">{language}</span>
             </span>
           )}
+          {stargazers_count > 0 ? (
+            <span className="repo_star-count">
+              <FaRegStar className="repo_star-icon" />
+              {stargazers_count}
+            </span>
+          ) : null}
           {" Updated "}
           <span>{timeSince(updated)}</span>
         </div>

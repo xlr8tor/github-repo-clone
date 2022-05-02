@@ -28,6 +28,26 @@ export const Wrapper = styled.div`
     position: relative;
   }
 
+  .profile_update {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    z-index: 2;
+    width: 38px;
+    height: 38px;
+    margin-bottom: var(--mb-2);
+    margin-left: -40px;
+  }
+
+  .profile_update-wrapper {
+    display: inline-flex;
+    background-color: #fff;
+    border: 1px solid hsl(210deg 18% 84%);
+    border-radius: 2em;
+    box-shadow: hsl(213deg 14% 12% / 4%);
+    padding: 0.5rem;
+    line-height: 1;
+  }
   .profile__info {
     padding: 1rem 0;
     width: 100%;

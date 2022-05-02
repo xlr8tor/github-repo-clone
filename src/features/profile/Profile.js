@@ -7,6 +7,7 @@ import {
   UilEnvelope,
   UilUsersAlt,
 } from "@iconscout/react-unicons";
+import { BsFillHouseFill } from "react-icons/bs";
 
 const Profile = () => {
   const Username = useSelector((state) => state.auth.user.login);
@@ -26,6 +27,11 @@ const Profile = () => {
           <div className="profile__data">
             <div className="profile__avatar">
               <Avatar />
+              <div className="profile_update">
+                <div className="profile_update-wrapper">
+                  <BsFillHouseFill />
+                </div>
+              </div>
             </div>
             <div className="profile__info">
               <h1 className="profile__name">{Name}</h1>

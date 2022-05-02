@@ -36,6 +36,7 @@ const Repos = () => {
               description={item.description}
               fork={item.fork}
               forks_url={item.forks_url}
+              stargazers_count={item.stargazers_count}
             />
           );
         })}
