@@ -68,13 +68,14 @@ export const Wrapper = styled.li`
 
   .repo_star-count {
     margin-right: var(--mb-2);
-    color: hsl(212deg 10% 38%);
+    color: var(--textColor);
   }
 
   .repo_star-icon {
     display: inline-block;
-    vertical-align: text-bottom;
+    padding-top: 2px;
     color: currentColor;
+    margin-right: var(--mb-0-25);
   }
 
   .repo__button-section {
